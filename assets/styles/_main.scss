@@ -1,0 +1,335 @@
+.header {
+	&__title {
+		a {
+			font-size: 3.2rem;
+			color: $dark;
+			text-decoration: none;
+		}
+	}
+
+	&__nav {
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.main {
+	.hero {
+		&__slider {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+
+			.hero__img-container {
+				position: relative;
+				flex-basis: calc(65% / 2);
+			}
+
+			.hero__img {
+				width: 100%;
+			}
+
+			.hero__img-container.active {
+				margin: 0 10px;
+				flex-basis: 35%;
+			}
+
+			.hero__img-container.active .hero__img-info {
+				display: block;
+			}
+
+			.hero__img-info {
+				position: absolute;
+				width: 45%;
+				right: 0;
+				bottom: 0;
+				padding: 32px 50px;
+				color: $white;
+				background-color: rgba(0, 0, 0, 0.8);
+				backdrop-filter: blur(30px);
+				display: none;
+			}
+
+			.info__top {
+				display: flex;
+				align-items: center;
+
+				.info__index {
+					margin-left: 10px;
+					font-size: 2.8rem;
+					font-weight: 900;
+				}
+			}
+
+			.info__title {
+				margin: 10px 0;
+				font-size: 3.2rem;
+			}
+
+			.info__desc {
+				margin-bottom: 40px;
+				font-size: 1.5rem;
+			}
+
+			.info__bottom {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.info__date {
+					font-family: 'Montserrat', sans-serif;
+					font-size: 1.2rem;
+					text-transform: uppercase;
+				}
+
+				.slider__arrows {
+					display: flex;
+					align-items: center;
+
+					svg + svg {
+						margin-left: 20px;
+					}
+
+					svg {
+						cursor: pointer;
+						transition: 0.3s ease-in-out;
+					}
+
+					svg:hover {
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+	}
+
+	.about {
+		display: flex;
+		gap: 100px;
+
+		&__info {
+			flex-basis: 55%;
+		}
+
+		&__services {
+			flex-basis: 45%;
+
+			display: flex;
+			flex-direction: column;
+		}
+
+		.about__service + .about__service {
+			margin-top: 40px;
+		}
+
+		&__service {
+			display: flex;
+
+			.service__icon {
+				margin-right: 20px;
+			}
+
+			.service__info {
+				.service__title {
+					font-size: 1.8rem;
+					font-weight: 700;
+					margin-bottom: 8px;
+				}
+			}
+		}
+	}
+
+	.products {
+		margin-bottom: 150px;
+
+		&__title {
+			text-align: center;
+		}
+
+		&__icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+
+		&__list {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.product {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				&__name {
+					font-size: 1.6rem;
+					color: $gray;
+				}
+
+				&__price {
+					font-size: 2.8rem;
+					font-weight: 700;
+					margin: 22px 0 28px;
+				}
+			}
+
+			.product + .product {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.seo {
+		display: flex;
+		justify-content: space-between;
+
+		&__img {
+			flex-basis: 55%;
+			margin-right: 80px;
+		}
+
+		&__info {
+			flex-basis: 45%;
+		}
+
+		&__desc {
+			padding-right: 165px;
+		}
+	}
+
+	.reviews {
+		text-align: center;
+
+		&__icons {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 60px;
+
+			.slider-arrow {
+				svg {
+					cursor: pointer;
+					transition: 0.3s ease-in-out;
+				}
+
+				svg:hover {
+					transform: scale(1.2);
+				}
+			}
+
+			& > svg {
+				margin: 0 140px;
+			}
+		}
+	}
+
+	.order {
+		text-align: center;
+
+		&__title {
+			margin-bottom: 10px;
+		}
+
+		&__form {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+		}
+
+		&__select,
+		&__input {
+			width: 280px;
+			font-size: 1.4rem;
+			padding: 12.5px 20px;
+			border: 1px solid $dark;
+			border-radius: 25px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&__select-wrapper {
+			position: relative;
+
+			svg {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 20px;
+			}
+		}
+
+		&__select {
+			appearance: none;
+		}
+
+		&__input {
+			margin: 0 12px;
+		}
+	}
+
+	.adword {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 260px;
+		padding-right: 165px;
+
+		&__img {
+			flex-basis: 45%;
+		}
+
+		&__info {
+			flex-basis: 55%;
+		}
+
+		&__desc {
+			padding-right: 95px;
+		}
+	}
+
+	.gallery {
+		display: flex;
+
+		img {
+			flex: 1;
+			transition: 0.3s ease-in-out;
+		}
+
+		img:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.footer {
+	padding: 60px 0;
+	text-align: center;
+
+	&__title {
+		margin-bottom: 30px;
+		font-size: 7.5rem;
+		color: $dark;
+		text-decoration: none;
+	}
+
+	&__line {
+		width: 80%;
+		height: 2px;
+		background-color: #d8d8d8;
+		margin: 40px auto;
+	}
+
+	&__copyright {
+		margin-top: 40px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.2rem;
+	}
+}

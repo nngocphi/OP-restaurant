@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	color: $dark;
+	background-color: #f2f2f2;
+	min-height: 100vh;
+	font-family: 'Inter', sans-serif;
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: 400;
+}
+
+.section-padding {
+	margin: 120px 160px;
+}
+
+.title {
+	font-size: 5.4rem;
+	line-height: 1.2;
+	margin-bottom: 30px;
+}
+
+.desc {
+	color: $gray;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+.btn {
+	width: 152px;
+	padding: 5px;
+	background-color: #05d081;
+	border: none;
+	border-radius: 40px;
+	cursor: pointer;
+}
+
+.btn,
+.btn-content {
+	display: block;
+	transition: 0.3s ease-in-out;
+}
+
+.btn:hover,
+.btn-content:hover {
+	background-color: #04bb74;
+}
+
+.btn > .btn-content {
+	padding: 6px;
+	color: $white;
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: transparent;
+	border: 1px dashed #ffffff;
+	border-radius: 25px;
+}
